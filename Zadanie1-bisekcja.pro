@@ -9,4 +9,10 @@ CONFIG   += console
 CONFIG   -= app_bundle
 
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    plot.cpp \
+    bisectionsolver.cpp
+
+HEADERS += \
+    plot.h \
+    bisectionsolver.h
