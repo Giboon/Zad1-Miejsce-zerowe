@@ -32,6 +32,10 @@ double BisectionSolver::result() const{
     return m_result;
 }
 
+double BisectionSolver::xForResult() const{
+    return m_xForResult;
+}
+
 void BisectionSolver::solve(){
     if((m_a < 0 && m_b > 0) || (m_a > 0 && m_b < 0)){
         double middle = this->abs(m_a - m_b)/2;

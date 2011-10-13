@@ -1,6 +1,7 @@
 #ifndef PLOT_H
 #define PLOT_H
 
+#include <gnuplot.hpp>
 
 /*
   klasa obsługująca rysującą wykresu

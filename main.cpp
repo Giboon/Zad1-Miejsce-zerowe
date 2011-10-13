@@ -11,8 +11,8 @@ int main()
 {
     double a,b,epsilon;
     cout << "Metoda bisekcji\nPodaj dane:\n\n";
-    cout << "Początek przedziału a = "; cin >> a;
-    cout << "Podaj koniec przedziału b = "; cin >> b;
+    cout << "Poczatek przedzialu a = "; cin >> a;
+    cout << "Podaj koniec przedzialu b = "; cin >> b;
     cout << "Podaj epsilon = "; cin >> epsilon;
 
     BisectionSolver solver;
