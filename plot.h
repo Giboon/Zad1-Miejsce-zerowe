@@ -12,7 +12,7 @@
 class Plot
 {
 public:
-    Plot(double m_a,double m_b);
+    Plot(double begin, double end);
     ~Plot();
 
     void hornerMe();
@@ -27,6 +27,10 @@ private:
            m_yZero;
     string m_tittle,
            m_method;
+
+    double function1(double arg);
+    double function2(double arg);
+    double function3(double arg);
 };
 
 #endif // PLOT_H
