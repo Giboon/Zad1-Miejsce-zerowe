@@ -37,21 +37,24 @@ double BisectionSolver::xForResult() const{
 }
 
 void BisectionSolver::solve(){
-    if((m_a < 0 && m_b > 0) || (m_a > 0 && m_b < 0)){
-        double middle = this->abs(m_a - m_b)/2;
+    double middle = 0;
+    if((function3(m_a) < 0 && function3(m_b) > 0) || (function3(m_a) > 0 && function3(m_b) < 0)){
         while(this->abs(m_a-m_b) >= m_epsilon){
+            middle = (m_a + m_b)/2.0;
             //domyslnie funkcja 1
-            if(function1(m_a) * function1(middle) < 0){
+            if(function3(m_a) * function3(middle) < 0){
                 m_b = middle;
-            }else{
+            }else if(function3(m_a) * function3(middle) > 0){
                 m_a = middle;
+            }else{
+                return;
             }
             m_loopCounter++;
         }
-        m_result = function1(middle);
+        m_result = function3(middle);
         m_xForResult = middle;
     }else{
-        m_error = "Wrong boundaries";
+        m_error = "Wrong values at the ends of boundaries";
     }
 }
 
@@ -80,4 +83,8 @@ double BisectionSolver::function2(double arg){
 
 double BisectionSolver::function3(double arg){
     return 2*exp(-arg)-sin(arg);
+}
+
+bool BisectionSolver::hasZeroValue() const{
+    //jak sprawdzić czy jet miejsce zerowe !!!
 }

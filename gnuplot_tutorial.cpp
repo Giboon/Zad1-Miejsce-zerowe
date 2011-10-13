@@ -28,7 +28,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-#include "gnuplot_i.hpp"
+#include "gnuplot.hpp"
 
 // Jeżeli zmienna żrodowiskowa wskazująca ścieżkę do gnuplot nie jest zdefiniowana
 // to trzeba ją podać. Pod linuksem nie trzeba tego robić, a pod Windowsem,
