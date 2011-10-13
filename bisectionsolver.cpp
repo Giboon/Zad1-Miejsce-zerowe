@@ -84,7 +84,3 @@ double BisectionSolver::function2(double arg){
 double BisectionSolver::function3(double arg){
     return 2*exp(-arg)-sin(arg);
 }
-
-bool BisectionSolver::hasZeroValue() const{
-    //jak sprawdzić czy jet miejsce zerowe !!!
-}
